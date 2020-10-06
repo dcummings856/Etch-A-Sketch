@@ -1,14 +1,10 @@
 let container = document.querySelector('#container')
 let btnSet = document.querySelector('.btn-set');
-let btnReset = document.querySelector('.btn-reset');
 let btnClear = document.querySelector('.btn-clear');
+let etchasketch = document.querySelector('.etchasketch');
 
 
 const createGrid = (num) => {
-    if (num > 100) {
-        return alert('ERROR NO MORE THAN 100');
-    }
-    const container = document.querySelector('#container')
     for (let i = 0; i <= num; i++) {
         let row = document.createElement('div');
         row.className = 'row';
@@ -22,8 +18,7 @@ const createGrid = (num) => {
     }
 };
 
-const removeGrid = (num) => {
-    const container = document.querySelector('#container')
+const clearGrid = (num) => {
     for (let i = 100; i >= num; i--) {
         let row = document.querySelector('#container > .row');
         for (let j = 100; j >= num; j--) {
@@ -47,9 +42,13 @@ btnSet.addEventListener('mouseout', () => {
 })
 
 btnSet.addEventListener('click', () => {
+    container.removeChild(etchasketch);
+    container.style.cssText = 'margin: 0px 450px; top: 50%; left: 20%; border: 10px solid rgb(95, 82, 26);';
     createGrid(100);
 })
 
 btnClear.addEventListener('click', () => {
-    removeGrid(0);
+    container.appendChild(etchasketch);
+    container.style.cssText = 'border: solid white';
+    clearGrid(0);
 })

@@ -1,3 +1,10 @@
+.etchasketch {
+    font-family: 'Bree Serif', sans-serif;
+    font-size: 60px;
+    color: rgb(122, 60, 36);
+    text-align: center;
+}
+
 .row {
     display: flex;
 }
