@@ -41,6 +41,14 @@ btnSet.addEventListener('mouseout', () => {
     btnSet.style.backgroundColor = "rgb(239,239,239)";
 })
 
+btnClear.addEventListener('mouseover', () => {
+    btnClear.style.backgroundColor = "rgb(210,210,210)";
+})
+
+btnClear.addEventListener('mouseout', () => {
+    btnClear.style.backgroundColor = "rgb(239,239,239)";
+})
+
 btnSet.addEventListener('click', () => {
     container.removeChild(etchasketch);
     container.style.cssText = 'margin: 0px 450px; top: 50%; left: 20%; border: 10px solid rgb(95, 82, 26);';
